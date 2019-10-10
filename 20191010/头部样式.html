@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+          <div class="big">
+              <div class="contain">
+                  <div>辉煌</div>
+                  <div class="arrow">
+                      <span></span>
+                  </div>
+              </div>
+              <div  class="contain">
+                  <div>哈哈</div>
+                  <div class="arrow">
+                      <span></span>
+                  </div>
+              </div>
+              <div  class="contain">
+                  <div>哈哈232323</div>
+                  <div class="arrow">
+                      <span></span>
+                  </div>
+              </div>
+
+          </div>
+</body>
+<style>
+    .contain{
+
+            width: 80px;
+            height: 80px;
+            border-right: solid  1px red;
+        display: inline-block;
+        line-height: 80px;
+        position: relative;
+
+
+
+    }
+    .contain:hover{
+        background: pink;
+    }
+    .contain:hover  .arrow span{
+        border-left: 28px solid pink;
+    }
+    .arrow{   width: 0;height: 0;border-left: 30px solid #333;border-bottom: 30px solid transparent;border-top: 30px solid transparent;  position: absolute;
+        top: 21px;
+        left: 79px; z-index: 1000}
+    .arrow span{display: block;width: 0;height: 0;border-left: 28px solid #fff;border-bottom: 28px solid transparent;border-top: 28px solid transparent;position: absolute;left: -30px;top: -28px}
+</style>
+</html>

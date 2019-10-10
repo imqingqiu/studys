@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>无标题文档</title>
+
+    <style>
+
+        ul {
+            list-style: none;
+        }
+        .s-side {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 230px;
+            bottom: 0;
+            overflow: auto;
+            font-size: 16px;
+            background-color: #7d7472;
+            color: #fff;
+        }
+        .s-side > ul {
+            margin-top: 0;
+            padding-left: 0;
+        }
+        .s-side > ul > li {
+            line-height: 40px;
+            width: 100%;
+            border: 1px solid;
+        }
+        .s-side > ul > li > a > i,
+        .s-side > ul > li > div > i {
+            display: inline-block;
+            width: 40px;
+            text-align: center;
+        }
+        i.icon-chevron-up {
+            float: right;
+        }
+        .iconRotate {
+            transform: rotate(180deg);
+            transition: transform .5s;
+        }
+        .s-firstNav > i.icon-chevron-up {
+            margin-right: 5px;
+            margin-top: 10px;
+        }
+        .s-firstDrop {
+            background-color: #07a3c3;
+
+        }
+        .s-firstDrop > li {
+            line-height: 33px;
+            border: 1px solid;
+        }
+        .s-firstDrop,
+        .s-secondDrop {
+            display: none;
+        }
+        .s-secondNav > i.icon-chevron-up {
+            margin-right: 18px;
+            margin-top: 12px;
+        }
+        .s-secondDrop {
+            padding-left: 20px;
+            background-color: #decece;
+        }
+
+    </style>
+
+    <script>
+
+        ////窗口大小改变事件,获取div的宽度
+
+        window.onresize = resize;
+        function resize() {
+            alert(document.getElementById('rred').offsetWidth);
+        }
+
+
+
+        window.onload=function(){
+
+            var oBox=document.getElementById('box');
+
+            var aSpan=oBox.getElementsByTagName('span');
+
+            var oMenu=oBox.getElementsByTagName('div')[0];
+
+            var oUl=oMenu.getElementsByTagName('ul')[0];
+
+            var aLi=oUl.getElementsByTagName('li');
+
+            var iW=0;
+
+            for(var i=0;i<aLi.length;i++)
+
+            {
+
+                iW+=aLi[i].offsetWidth;
+
+            }
+
+            oUl.style.width=iW+'px';
+
+            aSpan[0].onclick=function()
+
+            {
+                var iLeft=oUl.offsetLeft+10;
+
+                iLeft>=0&&(iLeft=0);
+
+                oUl.style.left=iLeft+'px';
+
+            }
+
+            aSpan[1].onclick=function()
+
+            {
+                var iLeft=oUl.offsetLeft-10;
+
+                var maxLeft=oMenu.offsetWidth-oUl.offsetWidth;
+                console.log(oMenu.offsetWidth, 'menu')
+                console.log(oUl.offsetWidth, 'oUl')
+
+                iLeft<=maxLeft&&(iLeft=maxLeft);
+
+                oUl.style.left=iLeft+'px';
+
+            }
+
+        }
+
+    </script>
+
+<body>
+
+<div class="s-side">
+    <ul>
+        <li class="s-firstItem">
+            <a href="">
+                <i class="icon-home"></i>
+                <span>一级导航</span>
+            </a>
+        </li>
+        <li>
+            <div class="d-firstNav s-firstNav">
+                <i class="icon-tasks"></i>
+                <span>一级菜单</span>
+                <i class="icon-chevron-up"></i>
+            </div>
+            <ul class="d-firstDrop s-firstDrop">
+                <li>
+                    <div class="d-secondNav s-secondNav">
+                        <i class="icon-circle"></i>
+                        <span>二级菜单</span>
+                        <i class="icon-chevron-up"></i>
+                    </div>
+                    <ul class="d-secondDrop s-secondDrop">
+                        <li class="s-thirdItem">
+                            <a href="">三级导航</a>
+                        </li>
+                        <li class="s-thirdItem">
+                            <a href="">三级导航</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="d-secondNav s-secondNav">
+                        <i class="icon-circle"></i>
+                        <span>二级菜单</span>
+                        <i class="icon-chevron-up"></i>
+                    </div>
+                    <ul class="d-secondDrop s-secondDrop">
+                        <li class="s-thirdItem">
+                            <a href="">三级导航</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="s-secondItem">
+                    <a href="">
+                        <i class="icon-circle"></i>
+                        <span>二级导航</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="d-firstNav s-firstNav">
+                <i class="icon-bar-chart"></i>
+                <span>一级菜单</span>
+                <i class="icon-chevron-up"></i>
+            </div>
+            <ul class="d-firstDrop s-firstDrop">
+                <li class="s-secondItem">
+                    <i class="icon-circle"></i>
+                    <a href="">二级导航</a>
+                </li>
+                <li class="s-secondItem">
+                    <i class="icon-circle"></i>
+                    <a href="">二级导航</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+</body>
+
+</html>

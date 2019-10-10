@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        http://www.qianduandaxue.com/javascriptjiaocheng/60.html
+        https://blog.csdn.net/hsd2012/article/details/51124532  JS中把函数作为另一函数的参数传递总结
+        <div id ="id3">
+            点击出提示啊
+        </div>
+</body>
+</html>
+<script>
+    // 简单例子
+    // function test1(Func) {
+    //     Func();
+    // }
+    // function test2() {
+    //     alert("我是test2");
+    // }
+    // test1(test2);
+
+    // // 例子2
+    // function test3(Func) {
+    //    Func(mydata);
+    // }
+
+    // function test4(data) {
+    //     alert(data);
+
+    // }
+
+    // test3(test4("带参数的函数，作为参数")); 
+
+
+
+    // 问题
+    var obj3=document.getElementById('id3');
+    obj3.addEventListener('click',curClick('id1'),true);
+    function curClick(id){
+        alert(id);
+    }
+
+
+
+</script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div style="width: 220px;background:#0a6aa1;height: 100%;float:left;"></div>
+<div style="margin-left: 230px;background:#ff66cc;height: 100%;overflow:auto;color:#ffffff;" id="header">
+    <div class="big" onclick=""></div>
+</div>
+</body>
+</html>
+<style>
+
+    html,body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    #header >div{
+        height: 700px;
+        width: 200px;
+        background: green;
+    }
+    .big{
+        height: 200px;
+        width: 200px;
+        background: green;
+    }
+</style>
+<script>
+    var header1 = document.getElementById("header");
+    var p = document.createElement("p"); // 创建一个元素节点
+    insertAfter(p,header1); // 因为js没有直接追加到指定元素后面的方法 所以要自己创建一个方法
+    function insertAfter( newElement, targetElement ){ // newElement是要追加的元素 targetElement 是指定元素的位置
+        var parent = targetElement.parentNode; // 找到指定元素的父节点
+        if( parent.lastChild == targetElement ){ // 判断指定元素的是否是节点中的最后一个位置 如果是的话就直接使用appendChild方法
+            parent.appendChild( newElement, targetElement );
+        }else{
+            parent.insertBefore( newElement, targetElement.nextSibling );
+        };
+    };
+</script>

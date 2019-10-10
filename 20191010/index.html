@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class ='big-container'>
+        <div class ='flex'>
+            <div>第一行</div>
+            <div>第二行</div>
+        </div>
+        <div class ='right'>右侧弹性布局啊</div>
+    </div>
+</body>
+<style>
+    .big-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .flex {
+        display: flex;
+        flex: 1;
+        justify-content: flex-start;
+        /*align-items: center;*/
+        /*display: flex;*/
+    }
+    .flex div {
+       /*width: 50%;*/
+        flex: 1;
+    }
+    .right{
+        width: 50px;
+    }
+</style>
+</html>
