@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    https://juejin.im/post/5aae076d6fb9a028cc6100a9 前端经典面试题
+    css常见的页面布局
+
+    <h1>1 水平居中</h1>
+    (1)文本/行内元素/行内块级元素▲
+    <div class="center">
+        (1)文本▲(单纯的文本)
+        <span>行内元素</span>
+        <div>行内块级元素</div>
+    </div>
+    (2)单个块级元素▲
+    <div class="blockCenter">我是单个块级元素啊</div>
+    (3)使用绝对定位实现▲
+    (4)任意个元素(flex)
+    <div class="flexCenter">
+            <!-- .flex(@dir, @x, @y, @wrap) {
+                display: flex;
+                display: -webkit-flex;
+                flex-direction: @dir;
+                justify-content: @x;
+                align-items: @y;
+                flex-wrap: @wrap;
+                -ms-flex-wrap: @wrap;
+            } -->
+        <div>任意个元素居中啊哈哈哈</div>
+        <span>span标签flex布局</span>
+    </div>
+
+
+    本章小结：
+
+对于水平居中，我们应该先考虑，哪些元素有自带的居中效果，最先想到的应该就是 text-align:center 了，但是这个只对行内内容有效，所以我们要使用 text-align:center 就必须将子元素设置为 display: inline; 或者 display: inline-block; ；
+其次就是考虑能不能用margin: 0 auto; ，因为这都是一两句代码能搞定的事，实在不行就是用绝对定位去实现了。
+移动端能用flex就用flex，简单方便，灵活并且功能强大，无愧为网页布局的一大利器！
+
+
+</body>
+</html>
+<style>
+    .center{
+        text-align: center
+    }
+    .blockCenter{
+        margin: auto;
+        width: 300px; 
+    }
+    .flexCenter{
+        display: flex;
+        justify-content: center;
+    }
+</style>
+<script>
+    
+</script>
