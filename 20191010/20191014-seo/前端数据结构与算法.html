@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>https://juejin.im/post/5958bac35188250d892f5c91 我接触过的前端数据结构与算法</h1>
+
+    <pre>
+         递归和查DOM
+         Set/Map的实现
+         数组去重的几种方法比较
+         栈和堆
+         节流
+         图像处理
+    </pre>
+
+    <pre>
+        
+        1. 递归
+
+        树形结构需要递归
+        使用递归的优点是代码简单易懂，缺点是效率比不上非递归的实现。Chrome浏览器的查DOM是使用非递归实现。非递归要怎么实现呢？
+
+
+        2 非递归查数据
+        
+        比如查询标签的时候 document.getElementByClassName   之类 用的while
+
+
+        3. 重复值处理
+
+        （1）双重循环
+        var lastHouses = [];
+        filterHouse: function(houses){
+            if(lastHouses === null){
+                lastHouses = houses;
+                return {
+                    remainsHouses: [], 
+                    newHouses: houses
+                };  
+            }   
+            var remainsHouses = [], 
+                newHouses = []; 
+
+            for(var i = 0; i < houses.length; i++){
+                var isNewHouse = true;
+                for(var j = 0; j < lastHouses.length; j++){
+                    if(houses[i].id === lastHouses[j].id){
+                        isNewHouse = false;
+                        remainsHouses.push(lastHouses[j]);
+                        break;
+                    }   
+                }   
+                if(isNewHouse){
+                    newHouses.push(houses[i]);
+                }   
+            }   
+            lastHouses = remainsHouses.concat(newHouses);
+            return {
+                remainsHouses: remainsHouses,
+                newHouses: newHouses
+            };  
+        }
+
+
+        （2）使用Set
+
+        （3）使用Map
+ 
+    </pre>
+</body>
+</html>

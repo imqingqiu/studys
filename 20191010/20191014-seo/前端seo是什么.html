@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>什么叫做搜索引擎  搜索引擎（search engine）是一种信息检索系统，旨在协助搜索存储在计算机系统中的信息 https://www.jianshu.com/p/fccd6c8d0e5d</h1>
+
+    <h2>https://www.cnblogs.com/EnSnail/p/5671345.html 搜索引擎工作原理</h2>
+
+    <h3>https://www.zhihu.com/question/39873534</h3>
+    <pre>
+        浏览器渲染
+        单页应用用的基本都是浏览器渲染。优点很明确，后端只提供数据，前端做视图和交互逻辑，分工明确。
+        服务器只提供接口，路由以及渲染都丢给前端，服务器计算压力变轻了。但是弱点就是用户等待时间变长了，尤其在请求数多而且有一定先后顺序的时候。
+
+        服务器渲染
+        服务器接到用户请求之后，计算出用户需要的数据，然后将数据更新成视图（也就是一串dom字符）发给客户端，
+        客户端直接将这串字符塞进页面即可。这样做的好处是响应很快，用户体验会比较好，另外对于搜索引擎来说也是友好的，有SEO优化。
+        现在题主说的应该是nodejs层的服务器渲染，这里还有一个明显的好处就是前端性能优化更顺手了，可操作的空间大了。
+        但是缺点也很明显，如果不是增加一个node层的话，前后端责任分工不明，不能很好的并行开发。另外也增加了服务器计算压力（虽然可以做渲染缓存，但毕竟是多做了计算）。
+
+
+        二、为什么使用服务器端渲染?服务器端渲染(SSR)的优势主要在于：更好的 SEO，由于搜索引擎爬虫抓取工具可以直接查看完全渲染的页面。
+        更好的用户体验，对于缓慢的网络情况或运行缓慢的设备，加载完资源浏览器直接呈现，无需等待所有的 JavaScript 都完成下载并执行，才显示服务器渲染的HTML。
+
+    </pre>
+
+
+    <pre>
+        vue服务器渲染选择的是nuxt框架
+        react服务器渲染http://react-china.org/t/react-mobx-webpack4/26008 详细看
+        https://cn.redux.js.org/docs/recipes/ServerRendering.html react 服务器渲染
+    </pre>
+</body>
+</html>
