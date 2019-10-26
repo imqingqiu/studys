@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        1 https://juejin.im/post/5b17a2c251882513e9059231 掘金网站
+</body>
+</html>
+<script>
+    var arr = [{
+        "name": "ZYTX",
+        "age": "Y13xG_4wQnOWK1QwJLgg11d0pS4hewePU95UHtpMl3eE81uS74NC-6zu-Rtnw4Ix",
+        "gender": "AAAAAA.doc"
+    }, {
+        "name": "ZYTA",
+        "age": "Y13xG_4wQnOWK1QwJLgg11d0pS4hewePU95UHtpMl3eE81uS74NC-6zu-Rtnw4Ix",
+        "gender": "BBBBBB.doc"
+    }, {
+        "name": "ZDTX",
+        "age": "Y13xG_4wQnOWK1QwJLgg11d0pS4hewePU95UHtpMl3eE81uS74NC-6zu-Rtnw4Ix",
+        "gender": "CCCCCC.doc"
+    }, {
+        "name": "ZYTX",
+        "age": "Y13xG_4wQnOWK1QwJLgg11d0pS4hewePU95UHtpMl3eE81uS74NC-6zu-Rtnw4Ix",
+        "gender": "AAAAAA.doc"
+    }];
+    let temp = [];
+    let tempNeed = [];
+    for(let i = 0; i< arr.length; i++){
+        if (!temp.includes(arr[i].name)) {
+            temp.push(arr[i].name)
+            tempNeed.push(arr[i])
+        }
+    }
+    console.log('需要的值', tempNeed)
+
+</script>
