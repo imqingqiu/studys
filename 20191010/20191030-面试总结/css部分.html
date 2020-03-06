@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-    <div id ='contain'>
-        <p class ="hhh"></p>
-        <div class ="hhh ttt">
+    <div id='contain'>
+        <p class="hhh"></p>
+        <div class="hhh ttt">
             <p>1 bfc</p>
             <p>2 ssr</p>
             <p>3 深拷贝浅拷贝</p>
@@ -18,27 +20,29 @@
             <p>5 vue touter钩子函数</p>
             <p>5 comuted watch nextTick</p>
             <p>隔行显示不同颜色</p>
-            
+
         </div>
     </div>
 </body>
+
 </html>
 <style>
-    p{
+    p {
         margin-bottom: 20px;
         margin-top: 20px;
         height: 20px;
         width: 20px;
         background: cornflowerblue;
     }
-    .ttt{
-        overflow: hidden; 
+
+    .ttt {
+        overflow: hidden;
     }
+
     #contain {
         overflow: hidden;
-        /* display: flex */   
+        /* display: flex */
     }
-   
 </style>
 <script>
     // var y = 10;
@@ -52,9 +56,13 @@
 
 
 
-    var a = {n: 1}
+    var a = {
+        n: 1
+    }
     var b = a;
-    a = {n: 2}
+    a = {
+        n: 2
+    }
     a.x = a;
     console.log(a.x)
     console.log(b.x)

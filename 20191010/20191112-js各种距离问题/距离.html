@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- https://juejin.im/entry/5a6ef0b36fb9a01cbd58dcab
+        <div class="one">
+            javascript高级应用<br>
+            javascript高级应用<br>
+            javascript高级应用<br>
+            javascript高级应用<br>
+            javascript高级应用<br>
+            javascript高级应用<br>
+            javascript高级应用<br>
+            javascript高级应用<br>
+            javascript高级应用<br>
+            javascript高级应用<br>
+            javascript高级应用<br>
+            javascript高级应用<br>
+            javascript高级应用<br>
+            javascript高级应用<br>
+            javascript高级应用<br>
+            javascript高级应用<br>
+            javascript高级应用<br>
+            javascript高级应用<br>
+        </div>
+        <div>
+            1）clientWidth和clientHeight
+            该属性指的是元素的可视部分宽度和高度，即padding+content，如果没有滚动条，即为元素设定的高度和宽度，如果出现滚动条，滚动条会遮盖元素的宽高，那么该属性就是其本来宽高减去滚动条的宽高
+            2）offsetWidth和offsetHeight
+            这一对属性指的是元素的border+padding+content的宽度和高度，该属性和其内部的内容是否超出元素大小无关，只和本来设定的border以及width和height有关
+            3）clientTop和clientLeft
+            这一对属性是用来读取元素的border的宽度和高度的
+            4）offsetLeft和offsetTop
+        </div> -->
+    <div class="two">
+        <div class="one">
+        </div>
+    </div>
+
+</body>
+
+</html>
+<style>
+    /* .one{
+        width: 200px;
+        height: 200px;
+        background: grey;
+        border: 1px solid #000000;
+        overflow: auto;
+    } */
+    .two {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border: 1px solid green;
+    }
+
+    .one {
+        width: 100px;
+        height: 100px;
+        background: grey;
+        margin: 20px;
+        border: 1px solid #000000;
+        position: absolute;
+        top: 20px;
+    }
+</style>
+<script>
+    window.onload = function () {
+        var oDiv = document.getElementsByTagName('div')[0];
+        console.log(oDiv.clientWidth + ":" + oDiv.clientHeight);
+        console.log(oDiv.clientLeft + ":" + oDiv.clientTop);
+        var oDiv3 = document.querySelector('.one');
+        console.log(oDiv3.offsetTop + ":" + oDiv3.offsetLeft);
+    }
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>
+        button
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        ...
+    </button>
+</body>
+
+</html>
+<style>
+    button::before {
+        position: absolute;
+        content: '';
+        left: -2em;
+        right: -2em;
+        top: -2em;
+        bottom: -2em;
+        pointer-events: none;
+        background-repeat: no-repeat;
+        background-image: radial-gradient(circle, #ff0081 20%, transparent 0),
+            radial-gradient(circle, #ff0081 20%, transparent 0),
+            radial-gradient(circle, #ff0081 20%, transparent 0),
+            radial-gradient(circle, #ff0081 20%, transparent 0);
+        background-size: 10% 10%, 20% 20%, 15% 15%;
+        background-position: 18% 40%, 20% 31%, 30% 30%;
+    }
+
+    button::before {
+        transition: .75s background-position ease-in-out, 75s background-size ease-in-out;
+    }
+
+    button:hover::before {
+        background-position: 5% 44%, -5% 20%, 7% 5%;
+        background-size: 0% 0%;
+    }
+</style>
